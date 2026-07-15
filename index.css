@@ -98,12 +98,6 @@ button{
     gap: 4px;
 }
 
-.tweet-reply{
-    border-top: 1px solid lightgray;
-    padding: 20px 0 0 0px;
-    margin: 10px 0 10px 40px;
-    width: 80%;
-}
 
 .handle{
     font-size: 12px;
@@ -116,6 +110,35 @@ button{
     width: 207px;
     font-size: 14px;
     line-height: 20px;
+}
+
+/* Reply */
+
+.tweet-reply{
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0px;
+    margin: 10px 0 10px 40px;
+    width: 80%;
+}
+
+.post-reply-container{
+    display: flex;
+    align-items: center;
+}
+
+.post-reply-container textarea{
+    height: 40px;
+    width: 80%;
+    /* border: red solid 2px; */
+    margin: 0;
+    padding: 5px;
+}
+
+#post-btn{
+    width: 20%;
+    height: 35px;
+    padding: 10px 5px;
+    font-size: 15px;
 }
 
 /* images */

@@ -14,6 +14,9 @@ document.addEventListener('click', function(e){
     else if(e.target.id === 'tweet-btn'){
         handleTweetBtnClick()
     }
+    else if(e.target.id === 'post-btn'){
+        handlePostBtnClick(e.target.dataset.reply)
+    }
 })
  
 function handleLikeClick(tweetId){ 
@@ -69,6 +72,10 @@ function handleTweetBtnClick(){
     tweetInput.value = ''
     }
 
+}
+
+function handlePostBtnClick(replyId){
+    console.log("test udany - tweetid: ",replyId)
 }
 
 function getFeedHtml(){
@@ -137,7 +144,11 @@ function getFeedHtml(){
         </div>            
     </div>
     <div class="hidden" id="replies-${tweet.uuid}">
-        ${repliesHtml}
+        <div>${repliesHtml}</div>
+        <div class="post-reply-container">
+            <textarea placeholder="Post your reply" id="tweet-reply-input"></textarea>
+            <button id="post-btn">Post</button>
+        </div>
     </div>   
 </div>
 `

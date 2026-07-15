@@ -17,3 +17,8 @@ The Fullstack Developer Path aims to teach you everything you need to become a J
 - [Become a Scrimba Pro member](https://scrimba.com/pricing)
 
 Happy Coding!
+
+Goals:
+- add ability to reply
+- save tweets likes and retweets to local storage
+- allow a user to delete a tweet
