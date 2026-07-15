@@ -14,8 +14,8 @@ document.addEventListener('click', function(e){
     else if(e.target.id === 'tweet-btn'){
         handleTweetBtnClick()
     }
-    else if(e.target.id === 'post-btn'){
-        handlePostBtnClick(e.target.dataset.reply)
+    else if(e.target.dataset.post){
+        handlePostBtnClick(e.target.dataset.post)
     }
 })
  
@@ -74,8 +74,22 @@ function handleTweetBtnClick(){
 
 }
 
-function handlePostBtnClick(replyId){
-    console.log("test udany - tweetid: ",replyId)
+function handlePostBtnClick(tweetId){
+    const tweetReplyInput = document.getElementById(`reply-input-${tweetId}`)
+    console.log(tweetReplyInput.value)
+
+    const targetPostObj = tweetsData.filter(function(tweet){
+        return tweet.uuid === tweetId
+    })[0]
+    targetPostObj.replies.push({
+                handle: `@Scrimba`,
+                profilePic: `images/scrimbalogo.png`,
+                tweetText: tweetReplyInput.value
+            })
+    
+    render()
+    document.getElementById(`replies-${tweetId}`).classList = ('')
+    tweetReplyInput.value = ''
 }
 
 function getFeedHtml(){
@@ -146,8 +160,8 @@ function getFeedHtml(){
     <div class="hidden" id="replies-${tweet.uuid}">
         <div>${repliesHtml}</div>
         <div class="post-reply-container">
-            <textarea placeholder="Post your reply" id="tweet-reply-input"></textarea>
-            <button id="post-btn">Post</button>
+            <textarea placeholder="Post your reply" id="reply-input-${tweet.uuid}"></textarea>
+            <button id="post-btn-${tweet.uuid}" data-post="${tweet.uuid}">Post</button>
         </div>
     </div>   
 </div>
