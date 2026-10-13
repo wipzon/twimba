@@ -1,24 +1,39 @@
-# Getting Started
-Install the dependencies and run the project
-```
+# Twimba
+
+A Twitter-style feed built with vanilla JavaScript. Post new tweets, like and retweet,
+and open threads to read and write replies.
+
+Built as part of [Scrimba's Fullstack Developer Path](https://scrimba.com/fullstack-path-c0fullstack).
+![Twimba screenshot](screenshot.png)
+
+## Features
+
+- **Post new tweets**, each with a unique ID (UUID)
+- **Like and retweet** with toggling counters and highlighted icons
+- **Reply threads**: show or hide replies under each tweet
+- **Posting replies**: added by me on top of the course version
+
+## Built with
+
+- JavaScript (ES modules, event delegation with `data-*` attributes, template literals)
+- HTML
+- CSS, Font Awesome icons
+
+## What I learned
+
+- Rendering the whole feed from a single data array and re-rendering it after every change
+- Using **one click listener for the whole page** and `data-*` attributes to tell which button was clicked and on which tweet
+- Extending someone else's starting code with a new feature (replies) without breaking what already worked
+
+## Next steps
+
+- [ ] Allow deleting your own tweets
+
+## Run locally
+
+```bash
+git clone https://github.com/wzolnierek/twimba.git
+cd twimba
 npm install
 npm start
 ```
-
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
-
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
-
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
-
-Happy Coding!
-
-Goals:
-- add ability to reply
-- save tweets likes and retweets to local storage
-- allow a user to delete a tweet
