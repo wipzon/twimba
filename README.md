@@ -4,6 +4,7 @@ A Twitter-style feed built with vanilla JavaScript. Post new tweets, like and re
 and open threads to read and write replies.
 
 Built as part of [Scrimba's Fullstack Developer Path](https://scrimba.com/fullstack-path-c0fullstack).
+
 ![Twimba screenshot](screenshot.png)
 
 ## Features
